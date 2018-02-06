@@ -1,0 +1,14 @@
+RFID module RC522
+https://www.aliexpress.com/item/Free-Shipping-RFID-module-RC522-Kits-S50-13-56-Mhz-6cm-With-Tags-SPI-Write-Read/32523771442.html?ws_ab_test=searchweb0_0,searchweb201602_3_10065_10068_10344_10342_10343_10340_10341_10084_10083_10618_10307_10134_5722312_10313_10059_10534_100031_10103_441_10624_442_10623_10622_10621_10620_10142-10620,searchweb201603_25,ppcSwitch_4&algo_expid=eef3f226-36c3-4042-b0a6-513573b29be7-2&algo_pvid=eef3f226-36c3-4042-b0a6-513573b29be7&priceBeautifyAB=0
+
+Wemos Mini D1
+https://www.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html
+
+Wemos OLED Scree Shield
+https://www.aliexpress.com/store/product/OLED-Shield-for-WeMos-D1-mini-0-66-inch-64X48-IIC-I2C/1331105_32627787079.html
+
+Buzzer
+https://www.aliexpress.com/item/5pcs-lot-Buzzer-Control-Board-5V-Passive-Buzzer-Module/1957820308.html?ws_ab_test=searchweb0_0,searchweb201602_3_10065_10068_10344_10342_10343_10340_10341_10084_10083_10618_10307_10134_5722312_10313_10059_10534_100031_10103_441_10624_442_10623_10622_10621_10620_10142,searchweb201603_25,ppcSwitch_4&algo_expid=c9d0e4b0-7a44-4109-8296-22c83e5769ce-1&algo_pvid=c9d0e4b0-7a44-4109-8296-22c83e5769ce&priceBeautifyAB=0
+
+RFID 13.56 MHz Keyfobs
+https://www.aliexpress.com/item/10pcs-RFID-Keytags-13-56-MHz-Rfid-Key-Fobs-Keychains-NFC-Tags-ISO14443A-MF-Nfc-Access/32848710158.html?priceBeautifyAB=0
