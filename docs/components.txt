@@ -4,8 +4,8 @@ https://www.aliexpress.com/item/Free-Shipping-RFID-module-RC522-Kits-S50-13-56-M
 Wemos Mini D1
 https://www.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html
 
-Wemos OLED Scree Shield
-https://www.aliexpress.com/store/product/OLED-Shield-for-WeMos-D1-mini-0-66-inch-64X48-IIC-I2C/1331105_32627787079.html
+OLED Screen
+https://www.aliexpress.com/item/0-96-inch-IIC-Serial-White-OLED-Display-Module-128X64-I2C-SSD1306-12864-LCD-Screen-Board/32780054633.html?ws_ab_test=searchweb0_0,searchweb201602_3_10065_10068_10344_10342_10343_10340_10341_10084_10083_10618_10307_10134_5722312_10313_10059_10534_100031_10103_441_10624_442_10623_10622_10621_10620_10142,searchweb201603_25,ppcSwitch_4&algo_expid=9c65b2b0-86fd-4b5f-89fa-6a1b2329c146-1&algo_pvid=9c65b2b0-86fd-4b5f-89fa-6a1b2329c146&priceBeautifyAB=0
 
 Buzzer
 https://www.aliexpress.com/item/5pcs-lot-Buzzer-Control-Board-5V-Passive-Buzzer-Module/1957820308.html?ws_ab_test=searchweb0_0,searchweb201602_3_10065_10068_10344_10342_10343_10340_10341_10084_10083_10618_10307_10134_5722312_10313_10059_10534_100031_10103_441_10624_442_10623_10622_10621_10620_10142,searchweb201603_25,ppcSwitch_4&algo_expid=c9d0e4b0-7a44-4109-8296-22c83e5769ce-1&algo_pvid=c9d0e4b0-7a44-4109-8296-22c83e5769ce&priceBeautifyAB=0
