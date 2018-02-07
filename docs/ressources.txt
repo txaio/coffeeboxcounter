@@ -1,1 +1,4 @@
+RFID
 http://makecourse.weebly.com/week10segment1.html
+EEPROM
+https://www.arduino.cc/en/Tutorial/EEPROMRead
