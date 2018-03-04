@@ -97,7 +97,9 @@ void setup() {
 }
 
 void btn_pushed(){
-  Serial.println("#BUTTON LOW");
+  Serial.println("#BUTTON PUSHED INTERRUPT");
+  display_users_debug();
+  delay(1000);
 }
 
 void loop() {
@@ -152,7 +154,9 @@ void display_users_debug(){
   for(int i = 0; i<NUM_USERS; i++){
     display.print(users[i].name);
     display.print("    ");
-    display.print(users[i].current_total);
+    for(int y = 0; y<4; y++){ 
+      display.print(users[i].uid[y],HEX);
+    }
     display.print("\n");
   }
   display.display(); 
