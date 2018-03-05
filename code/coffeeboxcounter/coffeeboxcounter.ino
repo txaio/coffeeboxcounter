@@ -77,10 +77,25 @@ void btn_pushed();
 void createEE();
 void saveEE();
 void splash_screen();
-void coffee_animate();
+void coffee_animate1();
+void coffee_animate2();
+void coffee_animate3();
+void coffee_animate4();
+void coffee_animate5();
 void display_users_debug();
 void display_users_totals();
-void step_counter();
+void step_counter(int& cnt, int steps, bool& re, void (*function_s)());
+
+// Counters
+int anim1_cnt = 0;
+int anim2_cnt = 0;
+int anim3_cnt = 0;
+int anim4_cnt = 0;
+int anim5_cnt = 0;
+int anim6_cnt = 0;
+int anim7_cnt = 0;
+bool reloop1, reloop2, reloop3, reloop4, reloop5, reloop6, reloop7 = true;
+#define STEP 50
 
 void setup() {
   Serial.begin(9600);        // Initialize serial communications for serial communications over USB
@@ -104,7 +119,7 @@ void btn_pushed(){
 }
 
 void loop() {
-   Serial.println("#LOOPING#");
+   //Serial.println("#LOOPING#");
   // Detects new RFID Card
   //if (mfrc522.PICC_IsNewCardPresent()) {
   //  Serial.println("RFID detected");
@@ -137,13 +152,26 @@ void loop() {
              //Copy current value to backup
 
              //Reser current counters
-  splash_screen();
-  delay(2000);
-  display_users_totals();
-  delay(3000);
+  step_counter(anim1_cnt, 700, reloop1, splash_screen);
+  if(reloop1){return;}
+  
+  //display_users_totals();
+  step_counter(anim2_cnt, 800, reloop2, display_users_totals);
+  if(reloop2){return;}
+  //delay(3000);
   //Animate Oled Screen with HotCoffee
-  coffee_animate();
-  delay(50);
+  step_counter(anim3_cnt, 400, reloop3, coffee_animate1);
+  if(reloop3){return;}
+  step_counter(anim4_cnt, 400, reloop4, coffee_animate2);
+  if(reloop4){return;}
+  step_counter(anim5_cnt, 400, reloop5, coffee_animate3);
+  if(reloop5){return;}
+  step_counter(anim6_cnt, 400, reloop6, coffee_animate4);
+  if(reloop6){return;}
+  step_counter(anim7_cnt, 400, reloop7, coffee_animate5);
+  if(reloop7){return;}
+  delay(STEP);
+  
 }
 
 void display_users_debug(){
@@ -200,34 +228,43 @@ void splash_screen(){
   display.display();
 }
 
-void step_counter(){
-
+void step_counter(int& cnt, int steps, bool& re, void (*function_s)()){
+	if(!re){return;}
+	if(cnt < steps){
+		(*function_s)();
+		cnt++;
+    re = true;
+    Serial.print("COUNTER ");
+    Serial.println(cnt);
+	} else {
+    re = false;
+		cnt = 0;
+	}
+  
 }
 
-void coffee_animate(){
-  //display.display();
-    // Clear the buffer.
-  display.clearDisplay();
-
-  display.clearDisplay();
-  display.drawBitmap(0, 0, anim01, 64, 48, WHITE);
-  display.display();
-  delay(700);
-  display.clearDisplay();
-  display.drawBitmap(0, 0, anim02, 64, 48, WHITE);
-  display.display();
-  delay(700);
-  display.clearDisplay();
-  display.drawBitmap(0, 0, anim03, 64, 48, WHITE);
-  display.display();
-  for (int cnt = 0; cnt < 2; cnt++) {
-  delay(700);
-  display.clearDisplay();
-  display.drawBitmap(0, 0, anim04, 64, 48, WHITE);
-  display.display();
-  delay(700);
-  display.clearDisplay();
-  display.drawBitmap(0, 0, anim05, 64, 48, WHITE);
-  display.display();
-  }
+void coffee_animate1(){
+    display.clearDisplay();
+    display.drawBitmap(0, 0, anim01, 64, 48, WHITE);
+    display.display();
+}
+void coffee_animate2(){
+    display.clearDisplay();
+    display.drawBitmap(0, 0, anim02, 64, 48, WHITE);
+    display.display();
+}
+void coffee_animate3(){
+    display.clearDisplay();
+    display.drawBitmap(0, 0, anim03, 64, 48, WHITE);
+    display.display();
+}
+void coffee_animate4(){
+    display.clearDisplay();
+    display.drawBitmap(0, 0, anim04, 64, 48, WHITE);
+    display.display();
+}
+void coffee_animate5(){
+    display.clearDisplay();
+    display.drawBitmap(0, 0, anim05, 64, 48, WHITE);
+    display.display();
 }
