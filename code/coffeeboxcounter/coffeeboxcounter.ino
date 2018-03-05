@@ -20,7 +20,7 @@
 // D3  - GPIO0
 // D4  - GPIO2
 // GND - Ground
-// 5V  - 
+// 5V  -
 
 // Included libraries
 #include <ESP8266WiFi.h>      // ESP library for all WiFi functions
@@ -80,6 +80,7 @@ void splash_screen();
 void coffee_animate();
 void display_users_debug();
 void display_users_totals();
+void step_counter();
 
 void setup() {
   Serial.begin(9600);        // Initialize serial communications for serial communications over USB
@@ -121,7 +122,7 @@ void loop() {
   //}
 
   // Detects if Button is pressed
-    
+
 
       //Display the table of user with current consuptions
 
@@ -154,12 +155,12 @@ void display_users_debug(){
   for(int i = 0; i<NUM_USERS; i++){
     display.print(users[i].name);
     display.print("    ");
-    for(int y = 0; y<4; y++){ 
+    for(int y = 0; y<4; y++){
       display.print(users[i].uid[y],HEX);
     }
     display.print("\n");
   }
-  display.display(); 
+  display.display();
 }
 
 void display_users_totals(){
@@ -174,20 +175,20 @@ void display_users_totals(){
     display.print(users[i].current_total);
     display.print("\n");
   }
-  display.display();  
+  display.display();
 }
 
 void createEE(){
-  
+
 }
 
 void saveEE(){
-  
+
 }
 
 void splash_screen(){
   display.clearDisplay();
- 
+
   // text display tests
   display.setTextSize(1);
   display.setTextColor(WHITE);
@@ -199,11 +200,15 @@ void splash_screen(){
   display.display();
 }
 
+void step_counter(){
+
+}
+
 void coffee_animate(){
   //display.display();
     // Clear the buffer.
   display.clearDisplay();
-  
+
   display.clearDisplay();
   display.drawBitmap(0, 0, anim01, 64, 48, WHITE);
   display.display();
