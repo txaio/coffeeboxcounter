@@ -217,24 +217,24 @@ void coffee_animate(){
   display.clearDisplay();
 
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim01, 128, 64, WHITE);
+  display.drawBitmap(0, 8, anim01, 128, 64, WHITE);
   display.display();
   delay(700);
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim02, 128, 64, WHITE);
+  display.drawBitmap(0, 8, anim02, 128, 64, WHITE);
   display.display();
   delay(700);
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim03, 128, 64, WHITE);
+  display.drawBitmap(0, 8, anim03, 128, 64, WHITE);
   display.display();
   for (int cnt = 0; cnt < 2; cnt++) {
   delay(700);
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim04, 128, 64, WHITE);
+  display.drawBitmap(0, 8, anim04, 128, 64, WHITE);
   display.display();
   delay(700);
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim05, 128, 64, WHITE);
+  display.drawBitmap(0, 8, anim05, 128, 64, WHITE);
   display.display();
   }
 }
