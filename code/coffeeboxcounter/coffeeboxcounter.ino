@@ -5,22 +5,22 @@
 ////////////////////////////////////////
 
 // Wemos Mini D1 Pinout - ESP8266
-// RST - RESET
-// A0  - ADC0
-// D0  - GPIO16
-// D5  - GPIO14 SCK - SPI
-// D6  - GPIO12 MISO - SPI
-// D7  - GPIO13 MOSI - SPI
-// D8  - GPIO15 SS - SPI
-// 3v3 - 3.3v
-// TX  - TXD
-// RX  - RXD
-// D1  - GPIO5 SCL
-// D2  - GPIO4 SDA
-// D3  - GPIO0 SPI RST
-// D4  - GPIO2
-// GND - Ground
-// 5V  -
+// RST	- RESET		-
+// A0		- ADC0		-
+// D0		- GPIO16 - 16
+// D5		- GPIO14 SCK - SPI - 14
+// D6		- GPIO12 MISO - SPI - 12
+// D7		- GPIO13 MOSI - SPI - 13
+// D8		- GPIO15 SS - SPI - 15
+// 3v3	- 3.3V
+// TX		- TXD
+// RX		- RXD
+// D1		- GPIO5 SCL - 5
+// D2		- GPIO4 SDA - 4
+// D3		- GPIO0 SPI RST - 0
+// D4		- GPIO2	-	PIN - 2
+// GND	- Ground
+// 5V		-
 
 // Included libraries
 #include <ESP8266WiFi.h>      // ESP library for all WiFi functions
@@ -129,7 +129,7 @@ void loop() {
   }
 
   //writeBlock(block, blockcontent);
-  
+
   readBlock(block, readbackblock);
   Serial.print("read block: ");
       for (int j=0 ; j<16 ; j++){
@@ -191,7 +191,7 @@ void display_users_totals(){
   display.print("   ");
   display.print("COFFEES");
   display.print("\n");
-  
+
   for(int i = 0; i<NUM_USERS; i++){
     display.print(users[i].name);
     display.print("    ");
@@ -255,7 +255,7 @@ void coffee_animate(){
   }
 }
 
-int writeBlock(int blockNumber, byte arrayAddress[]) 
+int writeBlock(int blockNumber, byte arrayAddress[])
 {
   //this makes sure that we only write into data blocks. Every 4th block is a trailer block for the access/security info.
   int largestModulo4Number=blockNumber/4*4;
@@ -263,7 +263,7 @@ int writeBlock(int blockNumber, byte arrayAddress[])
   if (blockNumber > 2 && (blockNumber+1)%4 == 0){Serial.print(blockNumber);Serial.println(" is a trailer block:");return 2;}//block number is a trailer block (modulo 4); quit and send error code 2
   Serial.print(blockNumber);
   Serial.println(" is a data block:");
-  
+
   /*****************************************authentication of the desired block for access***********************************************************/
   byte status = mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, trailerBlock, &key, &(mfrc522.uid));
   //byte PCD_Authenticate(byte command, byte blockAddr, MIFARE_Key *key, Uid *uid);
@@ -282,7 +282,7 @@ int writeBlock(int blockNumber, byte arrayAddress[])
 
 
   /*****************************************writing the block***********************************************************/
-        
+
   status = mfrc522.MIFARE_Write(blockNumber, arrayAddress, 16);//valueBlockA is the block number, MIFARE_Write(block number (0-15), byte array containing 16 values, number of bytes in block (=16))
   //status = mfrc522.MIFARE_Write(9, value1Block, 16);
   if (status != MFRC522::STATUS_OK) {
@@ -294,7 +294,7 @@ int writeBlock(int blockNumber, byte arrayAddress[])
 }
 
 
-int readBlock(int blockNumber, byte arrayAddress[]) 
+int readBlock(int blockNumber, byte arrayAddress[])
 {
   int largestModulo4Number=blockNumber/4*4;
   int trailerBlock=largestModulo4Number+3;//determine trailer block for the sector
@@ -317,8 +317,8 @@ int readBlock(int blockNumber, byte arrayAddress[])
 
 
   /*****************************************reading a block***********************************************************/
-        
-  byte buffersize = 18;//we need to define a variable with the read buffer size, since the MIFARE_Read method below needs a pointer to the variable that contains the size... 
+
+  byte buffersize = 18;//we need to define a variable with the read buffer size, since the MIFARE_Read method below needs a pointer to the variable that contains the size...
   status = mfrc522.MIFARE_Read(blockNumber, arrayAddress, &buffersize);//&buffersize is a pointer to the buffersize variable; MIFARE_Read requires a pointer instead of just a number
   if (status != MFRC522::STATUS_OK) {
           Serial.print("MIFARE_read() failed: ");
