@@ -4,3 +4,5 @@ EEPROM
 https://www.arduino.cc/en/Tutorial/EEPROMRead
 BITMAP2CPP
 http://javl.github.io/image2cpp/
+
+To correct resolution on display adapt after line 73 Adafruit_SSD1306.h

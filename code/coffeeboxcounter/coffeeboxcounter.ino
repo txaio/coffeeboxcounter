@@ -169,6 +169,13 @@ void display_users_totals(){
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,0);
+  display.print("TOTALS");
+  display.print("\n");
+  display.print("USER");
+  display.print("   ");
+  display.print("COFFEES");
+  display.print("\n");
+  
   for(int i = 0; i<NUM_USERS; i++){
     display.print(users[i].name);
     display.print("    ");
@@ -210,24 +217,24 @@ void coffee_animate(){
   display.clearDisplay();
 
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim01, 64, 48, WHITE);
+  display.drawBitmap(0, 0, anim01, 128, 64, WHITE);
   display.display();
   delay(700);
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim02, 64, 48, WHITE);
+  display.drawBitmap(0, 0, anim02, 128, 64, WHITE);
   display.display();
   delay(700);
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim03, 64, 48, WHITE);
+  display.drawBitmap(0, 0, anim03, 128, 64, WHITE);
   display.display();
   for (int cnt = 0; cnt < 2; cnt++) {
   delay(700);
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim04, 64, 48, WHITE);
+  display.drawBitmap(0, 0, anim04, 128, 64, WHITE);
   display.display();
   delay(700);
   display.clearDisplay();
-  display.drawBitmap(0, 0, anim05, 64, 48, WHITE);
+  display.drawBitmap(0, 0, anim05, 128, 64, WHITE);
   display.display();
   }
 }
