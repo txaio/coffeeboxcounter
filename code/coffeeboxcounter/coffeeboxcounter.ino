@@ -34,6 +34,9 @@
 #include <Adafruit_GFX.h>     // OLED GFX https://github.com/adafruit/Adafruit-GFX-Library
 #include <Adafruit_SSD1306.h> // OLED https://github.com/adafruit/Adafruit_SSD1306
 
+// Local Included
+#include "animations.h"       // Header files for screen animations
+
 // Version
 #define VERS 1.0
 
@@ -68,7 +71,6 @@ byte blockcontent[16] = {"PUTINPYTHONPUTI"};
 
 // OLED
 Adafruit_SSD1306 display(OLED_RESET);
-#include "animations.h"       // Header files for screen animations
 
 // Push Button
 #define PUSH_BTN_PIN D4
@@ -109,12 +111,6 @@ void setup() {
   //attachInterrupt(PUSH_BTN_PIN, btn_pushed, RISING);
   // Buzzer Setup
   //pinMode(BUZZER_PIN, OUTPUT);
-}
-
-void btn_pushed(){
-  Serial.println("#BUTTON PUSHED INTERRUPT");
-  display_users_debug();
-  delay(1000);
 }
 
 void loop() {
