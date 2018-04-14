@@ -1,0 +1,3 @@
+void ok_beep(){
+
+}
