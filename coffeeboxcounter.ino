@@ -1,7 +1,7 @@
 ////////////////////////////////////////
-// CoffeBoxCounter v0.0.1
-// Feb 2018
-// Copyleft
+// CoffeBoxCounter v0.3               //
+// April 2018                         //
+// Copyleft                           //
 ////////////////////////////////////////
 
 // Wemos Mini D1 Pinout - ESP8266
@@ -38,7 +38,10 @@
 #include "animations.h"       // Header files for screen animations
 
 // Version
-#define VERS 1.0
+#define VERS 0.3
+
+// USERS
+#define NUM_USERS 5
 
 // RFID
 

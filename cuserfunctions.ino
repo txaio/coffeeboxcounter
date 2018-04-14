@@ -1,5 +1,3 @@
-// USERS
-#define NUM_USERS 5
 // Struct to define user structure
 typedef struct {
 		byte uid[4];             //4 Bytes - UID to compare RFID respons
